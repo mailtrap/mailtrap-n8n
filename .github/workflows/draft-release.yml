@@ -79,7 +79,6 @@ jobs:
           next: ${{ steps.bump.outputs.next }}
           bump-type: ${{ inputs.bump_type }}
           release-notes: ${{ steps.notes.outputs.release_notes }}
-          files: package.json CHANGELOG.md
 
       - name: Create draft GitHub release
         if: steps.notes.outputs.release_notes != ''
