@@ -39,23 +39,23 @@ jobs:
 
       - name: Read current version
         id: read
-        uses: railsware/github-actions/read-version-from-package-json@master
+        uses: railsware/github-actions/read-version-from-package-json@add-sdk-release-actions
 
       - name: Compute next version
         id: bump
-        uses: railsware/github-actions/compute-next-semver@master
+        uses: railsware/github-actions/compute-next-semver@add-sdk-release-actions
         with:
           current: ${{ steps.read.outputs.version }}
           bump-type: ${{ inputs.bump_type }}
 
       - name: Abort if tag already exists
-        uses: railsware/github-actions/abort-if-tag-exists@master
+        uses: railsware/github-actions/abort-if-tag-exists@add-sdk-release-actions
         with:
           tag: ${{ steps.bump.outputs.tag }}
 
       - name: Generate release notes
         id: notes
-        uses: railsware/github-actions/generate-release-notes@master
+        uses: railsware/github-actions/generate-release-notes@add-sdk-release-actions
         with:
           tag: ${{ steps.bump.outputs.tag }}
 
@@ -65,14 +65,14 @@ jobs:
 
       - name: Prepend new section to CHANGELOG.md
         if: steps.notes.outputs.release_notes != ''
-        uses: railsware/github-actions/prepend-changelog@master
+        uses: railsware/github-actions/prepend-changelog@add-sdk-release-actions
         with:
           version: ${{ steps.bump.outputs.next }}
           release-notes: ${{ steps.notes.outputs.release_notes }}
 
       - name: Commit, push, open PR
         if: steps.notes.outputs.release_notes != ''
-        uses: railsware/github-actions/open-sdk-release-pr@master
+        uses: railsware/github-actions/open-sdk-release-pr@add-sdk-release-actions
         with:
           tag: ${{ steps.bump.outputs.tag }}
           current: ${{ steps.read.outputs.version }}
@@ -83,7 +83,7 @@ jobs:
 
       - name: Create draft GitHub release
         if: steps.notes.outputs.release_notes != ''
-        uses: railsware/github-actions/create-draft-github-release@master
+        uses: railsware/github-actions/create-draft-github-release@add-sdk-release-actions
         with:
           tag: ${{ steps.bump.outputs.tag }}
           release-notes: ${{ steps.notes.outputs.release_notes }}
