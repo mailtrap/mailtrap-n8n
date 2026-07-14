@@ -3,6 +3,7 @@ import { INodeProperties } from 'n8n-workflow';
 export interface MailtrapFields extends Record<
   | "accountId"
   | "idOrEmail"
+  | "search"
   | "fromName"
   | "fromEmail"
   | "replyToName"
@@ -168,6 +169,18 @@ export const mailtrapFields: MailtrapFields = {
     type: 'boolean',
     default: false,
     description: 'Whether the contact is unsubscribed',
+  },
+
+  // ---------------------------------------------------
+  //                  Contact Lists
+  // ---------------------------------------------------
+  search: {
+    displayName: 'Search',
+    name: 'search',
+    type: 'string',
+    default: '',
+    description: 'Filter contact lists by name',
+    placeholder: 'e.g. news',
   },
 
   // ---------------------------------------------------
