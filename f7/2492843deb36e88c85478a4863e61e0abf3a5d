@@ -1,0 +1,27 @@
+nodes/Mailtrap/actions/mailtrapFields.ts
+  s_b4eba797076413::t_0a61cca58f19eb 182
+  s_b4eba797076413::t_f80787f9992d7a 6
+  s_b4eba797076413::t_caa137ae16b7d9 174-181,183-185
+nodes/Mailtrap/actions/contact/getLists.operation.ts
+  s_b4eba797076413::t_e277242ab274cf 12
+  s_b4eba797076413::t_0771e2cb4b6d25 32-40
+nodes/Mailtrap/transport/index.ts
+  s_b4eba797076413::t_6c83085d3b7c6c 19,27
+  s_b4eba797076413::t_93e9ab1b936b73 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "f72492843deb36e88c85478a4863e61e0abf3a5d",
+  "prompts": {},
+  "sessions": {
+    "s_b4eba797076413": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae19c384-1629-4dd6-bb05-80a2485204d6",
+        "model": "claude-fable-5"
+      },
+      "human_author": null
+    }
+  }
+}
