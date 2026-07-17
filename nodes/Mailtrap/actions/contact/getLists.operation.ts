@@ -9,6 +9,7 @@ import { mailtrapFields } from "../mailtrapFields";
 
 const properties: INodeProperties[] = [
   mailtrapFields.accountId,
+  mailtrapFields.search,
 ];
 
 const displayOptions = {
@@ -28,7 +29,15 @@ export async function execute(
   const transport = new MailtrapTransport(this);
 
   const accountId = this.getNodeParameter('accountId', item) as string;
-  const responseData = await transport.request('GET', `/accounts/${accountId}/contacts/lists`);
+  const search = this.getNodeParameter('search', item, '') as string;
+
+  const responseData = await transport.request(
+    'GET',
+    `/accounts/${accountId}/contacts/lists`,
+    {},
+    undefined,
+    search ? { search } : {},
+  );
 
   data.push({ json: responseData, pairedItem: { item } });
 

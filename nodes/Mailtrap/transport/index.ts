@@ -16,6 +16,7 @@ export class MailtrapTransport {
    * @param endpoint
    * @param body
    * @param host
+   * @param qs
    * @throws NodeApiError
    */
   async request(
@@ -23,6 +24,7 @@ export class MailtrapTransport {
     endpoint: string,
     body: IDataObject = {},
     host?: string,
+    qs: IDataObject = {},
   ): Promise<any> {
     const options: IHttpRequestOptions = {
       method,
@@ -35,6 +37,7 @@ export class MailtrapTransport {
       },
       json: true as const,
       body: Object.keys(body).length ? body : undefined,
+      qs: Object.keys(qs).length ? qs : undefined,
     };
 
     try {
