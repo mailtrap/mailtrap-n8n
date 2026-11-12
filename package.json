@@ -15,7 +15,7 @@
     "lint": "eslint nodes package.json --ext .ts",
     "lintfix": "eslint nodes package.json --fix",
     "test": "jest",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes package.json"
+    "prepublishOnly": "npm run build && npm run lint -- -c .eslintrc.prepublish.js"
   },
   "keywords": [
     "n8n",
