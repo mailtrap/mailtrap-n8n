@@ -1,3 +1,14 @@
+## [1.1.6] - 2026-11-13
+
+## What's Changed
+* MT-22678: add Search field to Get Contact Lists by @Rabsztok in https://github.com/mailtrap/mailtrap-n8n/pull/20
+* Add release workflow by @IgorDobryn in https://github.com/mailtrap/mailtrap-n8n/pull/21
+
+## New Contributors
+* @Rabsztok made their first contribution in https://github.com/mailtrap/mailtrap-n8n/pull/20
+
+**Full Changelog**: https://github.com/mailtrap/mailtrap-n8n/compare/v1.1.5...v1.1.6
+
 ## [1.1.5] - 2026-06-29
 
 ## What's Changed
