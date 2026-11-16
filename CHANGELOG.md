@@ -1,3 +1,14 @@
+## [1.1.7] - 2026-11-16
+
+## What's Changed
+* Bump js-yaml from 4.1.0 to 4.3.2 by @dependabot[bot] in https://github.com/mailtrap/mailtrap-n8n/pull/23
+* Resolve vulnerable transitive dependencies by @VladimirTaytor in https://github.com/mailtrap/mailtrap-n8n/pull/24
+
+## New Contributors
+* @dependabot[bot] made their first contribution in https://github.com/mailtrap/mailtrap-n8n/pull/23
+
+**Full Changelog**: https://github.com/mailtrap/mailtrap-n8n/compare/v1.1.6...v1.1.7
+
 ## [1.1.6] - 2026-11-13
 
 ## What's Changed
