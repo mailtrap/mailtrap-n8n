@@ -51,10 +51,16 @@
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
     "gulp": "^5.0.0",
+    "n8n-workflow": "~2.47.2",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "typescript": "~5.8.3"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "pnpm": {
+    "overrides": {
+      "minimatch@>=7.0.0 <11.0.1": "^11.0.1"
+    }
   }
 }
