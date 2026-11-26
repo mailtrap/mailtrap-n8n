@@ -21,8 +21,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.1
       eslint-plugin-n8n-nodes-base:
-        specifier: ^1.16.3
-        version: 1.16.7(eslint@8.57.1)(typescript@5.8.3)
+        specifier: ^2.0.0
+        version: 2.0.0(eslint@8.57.1)(typescript@5.8.3)
       gulp:
         specifier: ^5.0.0
         version: 5.0.1
@@ -496,9 +496,14 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-n8n-nodes-base@1.16.7:
-    resolution: {integrity: sha512-lKo+stn4t2jXX/ZdmJv2ClUQnRZLwSOyqfqsYgD6I/wYwy9bqA6mna4CEzdQNFVg5f3/RODpd/JQMiITARY92g==}
+  eslint-plugin-local@1.0.0:
+    resolution: {integrity: sha512-bcwcQnKL/Iw5Vi/F2lG1he5oKD2OGjhsLmrcctkWrWq5TujgiaYb0cj3pZgr3XI54inNVnneOFdAx1daLoYLJQ==}
+
+  eslint-plugin-n8n-nodes-base@2.0.0:
+    resolution: {integrity: sha512-S9ot1KzqSEN6bYyHjVE+8MrzxvnAxZRL2zEcM+ubtht2wv5OO2rQURwJ1f6vetOgMjOTPVv+B9Z5deHfe8CADw==}
     engines: {node: '>=20.15', pnpm: '>=9.6'}
+    peerDependencies:
+      eslint: '>=8.40'
 
   eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
@@ -2022,17 +2027,20 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-n8n-nodes-base@1.16.7(eslint@8.57.1)(typescript@5.8.3):
+  eslint-plugin-local@1.0.0: {}
+
+  eslint-plugin-n8n-nodes-base@2.0.0(eslint@8.57.1)(typescript@5.8.3):
     dependencies:
       '@typescript-eslint/utils': 8.72.2(eslint@8.57.1)(typescript@5.8.3)
       camel-case: 4.1.2
+      eslint: 8.57.1
+      eslint-plugin-local: 1.0.0
       indefinite: 2.5.2
       pascal-case: 3.1.2
       pluralize: 8.0.0
       sentence-case: 3.0.4
       title-case: 3.0.3
     transitivePeerDependencies:
-      - eslint
       - supports-color
       - typescript
 
